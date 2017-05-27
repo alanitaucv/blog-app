@@ -1,0 +1,218 @@
+.borde{
+  border: 1px #000 solid;
+  text-align: center;
+  height: 50px;
+}
+
+.color1{background: #eeeeee;}
+.color2{background: #fcc314;}
+.color3{background: #94ac3c;}
+.color4{background: #295ba7;}
+
+.cv{
+  height: 100vh;
+}
+.sidebar{
+  border: 0px;
+}
+.red{
+  color: #bd0404;
+}
+
+.pais{
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+.date-post{
+  margin-bottom: -14px;
+  font-size: 11px;
+  color: #aaaaaa;
+  font-weight: 450;
+}
+
+.sabiduria-cards{
+  margin-bottom: 30px;
+}
+
+.sabiduria{
+  padding-top: 20px;
+}
+
+.syntaxis{
+  background-color: #282C34;
+  color: #98B954;
+  font-weight: bold;
+}
+.syntaxis-bottom{
+  background-color: #282C34;
+  color: #E06C75;
+  font-weight: 400;
+}
+.card-footer.syntaxis-bottom{
+
+}
+.post{
+  padding: 0 0 20px 0;
+}
+.cover-post{
+  padding: 10px 10px 0 0;
+}
+.contenido-post{
+  padding-bottom: 20px;
+  border-right: 1px solid #eeeeee;
+}
+
+.comentarios-post{
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+ }
+
+ .post-relacionados{
+   padding: 10px 0 10px 0;
+ }
+ .otro-post{
+   padding: 10px 0 10px 0;
+ }
+
+ .comentario{
+   border: 1px solid #dddddd;
+   border-radius: 4px;
+   padding: 5px 5px 5px 5px;
+   margin: auto;
+   font-size: 0.8rem;
+   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14) !important;
+   background-color: #efefef;
+   margin-bottom: 10px;
+ }
+
+ .nombreUsuario{
+   font-size: 0.85rem;
+   font-weight: bold;
+ }
+
+ .puntuacion{
+   font-size: 3rem;
+   font-weight: lighter;
+   margin-bottom: 0px;
+ }
+
+ .yellow{
+   color: #FFFF00;
+ }
+
+ /* ANIMACIONES*/
+/* slide in from the right */
+@-webkit-keyframes slideInRight {
+    from    { transform: translateX(100%);  }
+    to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from    { transform: translateX(100%);  }
+    to      { transform: translateX(0); }
+}
+@keyframes slideInRight {
+    from    { transform: translateX(100%);  }
+    to      { transform: translateX(0); }
+}
+
+@-webkit-keyframes flip {
+    from { transform: rotateY(180deg); z-index: 3}
+    to {transform: rotateY(0deg);}
+}
+@-moz-keyframes flip {
+   from { transform: rotateY(180deg); z-index: 3}
+   to {transform: rotateY(0deg);}
+}
+@keyframes flip {
+    from { transform: rotateY(180deg); z-index: 3}
+    to {transform: rotateY(0deg);}
+}
+
+@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}
+
+.flip{
+  -webkit-transition: -webkit-transform .7s;
+  -moz-transition: -moz-transform .7s;
+    -o-transition: -o-transform .7s;
+       transition: transform .7s;
+-webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+       transform-style: preserve-3d;
+   position: relative;
+}
+
+/* slide in from the bottom */
+@-webkit-keyframes slideOutLeft { to { transform: translateX(-100%); }}
+@-moz-keyframes slideOutLeft { to { transform: translateX(-100%); }}
+@keyframes slideOutLeft { to { transform: translateX(-100%); }}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+ opacity:0;  /* make things invisible upon start */
+ -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:fadeIn ease-in 1;
+ animation:fadeIn ease-in 1;
+
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+
+ -webkit-animation-duration:1s;
+ -moz-animation-duration:1s;
+ animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.4s;
+-moz-animation-delay: 0.4s;
+animation-delay: 0.4s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 0.8s;
+-moz-animation-delay:0.8s;
+animation-delay: 0.8s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay: 1.2s;
+animation-delay: 1.2s;
+}
+
+.fade-in.four {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}
+
+.ng-enter  { animation: slideInRight 1.0s both ease-in; }
+.ng-leave  { animation: slideOutLeft 0.7s both ease-in; }
+
+/*FIN ANIMACIONES*/
+
+/*.menu-left {
+  left: 0px;
+}
+.contenido{
+  left: 0px;
+}
+.menu-left.menu-left-open {
+  left: -240px;
+}
+.contenido.menu-left-open{
+  left:240px;
+}
+.menu-left, .menu-left-push, .contenido {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}*/

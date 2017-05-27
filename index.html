@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <meta name="description" content="">
+    <meta name="author" content="Zilerimar Fernandez - zilePlus">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>zilePlus Blog - Tecnología y algo más</title>
+    <base href="/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/rotating-card.css"/>
+    <link rel="stylesheet" href="./css/font-awesome.min.css"/>
+
+    <!-- Custom styles for this template -->
+    <link href="./css/dashboard.css" rel="stylesheet">
+  </head>
+
+  <body ng-controller="mainController">
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-custom">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand m-auto" href="index.html">zilePlus Blog - ¡Tecnología y algo más!</a>
+    </nav>
+
+    <div class="container-fluid" >
+      <div class="row">
+        <nav id="cv" class="col-sm-4 col-md-3 hidden-xs-down sidebar">
+          <div class="card-tim-container">
+             <div class="card-tim">
+                 <div class="front">
+                     <div class="cover">
+                         <img src="./images/cv/nubes.jpg"/>
+                     </div>
+                     <div class="user">
+                         <img class="rounded-circle" src="./images/cv/perfil-zile-2.jpg"/>
+                     </div>
+                     <div class="content">
+                         <div class="main">
+                             <h3 class="name">Zilerimar Fernández</h3>
+                             <p class="profession">Software Engineer</p>
+
+                             <p class="text-center">Licenciada en computación.</p>
+                             <p class="text-center">Con más de 5 años de experiencia en el desarrollo de software.</p>
+                             <img src="./images/cv/vzla.png" class="pais mx-auto d-block"  alt="">
+                         </div>
+                         <div class="footer">
+                             <div class="rating">
+                                 I <i class="fa fa-heart red"></i> Coding!
+                             </div>
+                         </div>
+                     </div>
+                 </div> <!-- end front panel -->
+                 <div class="back">
+                     <div class="header">
+                         <h5 class="motto">Contáctame! <a href="" role="button" data-toggle="modal" data-target="#contactame"><img src="./images/cv/commentsios_24px.png" class="mx-auto"  alt=""></a></h5>
+                         <!-- <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalLong"><img src="./images/cv/commentsios_24px.png" class="mx-auto"  alt=""></button> -->
+                     </div>
+                     <div class="content">
+                         <div class="main">
+                             <h4 class="text-center">Habilidades</h4>
+                             <p class="text-center">Angular, Javascript, HTML5, CSS3, MEAN Stack, Java, PHP</p>
+                             <p class="text-center">BPM, Bonitasoft, Camunda, Activiti, WSO2 BPS</p>
+                             <div class="stats-container">
+                                 <div class="stats">
+                                     <h5>Español</h5>
+                                     <p>
+                                         Nativo
+                                     </p>
+                                 </div>
+                                 <div class="stats">
+                                     <h5>Inglés</h5>
+                                     <p>
+                                         Intermedio
+                                     </p>
+                                 </div>
+                                 <div class="stats">
+                                     <h5>Francés</h5>
+                                     <p>
+                                         Intermedio
+                                     </p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="footer">
+                         <div class="social-links text-center">
+                             <a href="http://linkedin.com/in/zilerimarfernandez" class="google" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a>
+                             <a href="https://drive.google.com/open?id=0B4Xi8SsvU8yAdFlxQVF0SEdQRVk" class="facebook" target="_blank"><i class="fa fa-file-pdf-o fa-fw"></i></a>
+                             <a href="http://twitter.com/zilePlus" class="twitter" target="_blank"><i class="fa fa-twitter fa-fw"></i></a>
+
+                         </div>
+                     </div>
+                 </div> <!-- end back panel -->
+             </div> <!-- end card -->
+         </div> <!-- end card-container -->
+        </nav>
+
+        <div id="main" class="view">
+          <div id="vistas" class="view {{ viewClass }}" ng-view></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+  <div class="modal fade" id="contactame" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title m-auto" id="exampleModalLabel">¡Contáctame!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="" action="" method="">
+            <div class="form-group">
+              <label for="nombreUsuario">Nombre</label>
+              <input type="email" class="form-control form-control-success" id="nombreUsuario" placeholder="Escribe tu nombre!">
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo</label>
+              <input type="email" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="Escribe tu email!">
+              <small id="emailHelp" class="form-text text-muted">Tu dirección electrónica no la verán otros usuarios.</small>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea type="text" class="form-control" id="mensaje" aria-describedby="mensajeHelp" placeholder="Escribe tu mensaje!"></textarea>
+              <small id="mensajeHelp" class="form-text text-muted">Responderé tu mensaje en la brevedad posible. ¡Gracias por contactarme!</small>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-outline-info" data-dismiss="modal">Enviar mensaje</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/lib/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Angularjs  -->
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-route/angular-route.min.js"></script>
+    <script src="./node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="./node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <script src="js/controllers/post.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      $(document).scroll(function() {
+        scroll_start = $(this).scrollTop();
+        if(scroll_start > 0) {
+            $('nav.navbar-custom').css('background-color', 'rgba(255,255,255,1.0)');
+            $('nav.navbar-custom').css('border-bottom', '1px solid #eeeeee');
+            $('nav.navbar-custom').css('box-shadow', '0 0 3px 0 rgba(0, 0, 0, 0.4)');
+        } else {
+            $('nav.navbar-custom').css('background-color', 'transparent');
+            $('nav.navbar-custom').css('border-bottom', 'none');
+            $('nav.navbar-custom').css('box-shadow', 'none');
+        }
+      });
+    </script>
+  </body>
+</html>
